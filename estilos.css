@@ -27,7 +27,7 @@ ul li {
 
 .portada {
   margin-top: -18%;
-  height: 1000px !important;
+  height: 950px !important;
 }
 
 .titulo {
@@ -41,7 +41,7 @@ ul li {
 
 .grid,
 .col {
-  padding: 20px;
+  padding: 40px;
 }
 
 .grid {
@@ -53,14 +53,21 @@ ul li {
 }
 
 .grid_potus,
-.grid_sansevieria {
+.grid_sansevieria,
+.grid_ficus,
+.grid_lazo,
+.grid_adan,
+.grid_dracena,
+.grid_cordatum,
+.grid_helecho  {
   height: 42vh;
 }
 
-.grid_ficus,
-.grid_lazo {
-  height: 36vh;
-}
+/* .grid_ficus,
+.grid_lazo,
+.grid_adan{
+  height: 38vh;
+} */
 
 .subtitulo {
   color: #388e3c;
@@ -72,6 +79,7 @@ ul li {
 
 .box_subtitulo {
   margin-top: -5%;
+  margin-bottom: -2%;
 }
 
 .btn-dark {
