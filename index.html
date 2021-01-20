@@ -1,318 +1,261 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="estilos.css" />
-    <script src="main.js"></script>
-    <title>Planta mía</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@600&display=swap"
-      rel="stylesheet"/>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap"
-      rel="stylesheet"/>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
-      crossorigin="anonymous"/>
-  </head>
-  <body>
-    <nav class="navbar navbar-light bg-dark" id="nav">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img
-            src="img/logo.png"
-            class="img-fluid img-responsive logo"
-            alt=""
-            width="30"
-            height="24"
-            />
-        </a>
-        <ul>
-          <li>
-            <a href="form.html">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-cart2 carro"
-                viewBox="0 0 16 16">
-                <path
-                  d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
-                </svg></a>
-          </li>
-        </ul>
-      </div>
-    </nav>
 
-    <header>
-      <img
-        src="img/portada2.jpg"
-        class="img-fluid img-responsive portada"
-        alt="..."
-      />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="estilos.css" />
+  <title>Planta mía</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+  <script defer src="data.js"></script>
+  <script defer src="main.js"></script>
+  <script defer src="domBuilder.js"></script>
+</head>
+
+<body>
+  <nav class="navbar" id="nav">
+    <div class="container-nav">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/logo.png" class="img-fluid img-responsive logo" alt="" width="30" height="24" />
+      </a>
+      <ul>
+        <li>
+          <a href="form.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart2 carro"
+              viewBox="0 0 16 16">
+              <path
+                d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
+            </svg></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <header>
+    <img src="img/portada2.jpg" class="img-fluid img-responsive portada" alt="..." />
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-6 col-xs">
+          <h1 class="titulo animate__animated animate__bounceInLeft">
+            REGALÁ VERDE
+          </h1>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="container box_subtitulo">
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs">
+          <h2 class="subtitulo">Elegí la planta que más te guste</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-3 g-4 grid" id="productsContainer">
+      <div class="col">
+        <div class="card h-100">
+          <img src="img/suculenta2.jpg" class="card-img-top grid_suculenta img-fluid img-responsive" alt="..." />
+          <div class="card-body">
+            <h3 class="card-title">SUCULENTA</h3>
+            <p class="card-text">
+              Son aquellas en las que algún órgano está especializado en el
+              almacenamiento de agua en cantidades mayores que las plantas sin
+              esta adaptación. Estos órganos de reserva tienen una alta
+              proporción de tejido parenquimático.
+            </p>
+            <h2 class="precio">$ 800</h2>
+            <button type="button" class="btn btn-dark">
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="img/potus2.jpg" class="card-img-top grid_potus img-fluid img-responsive" alt="..." />
+          <div class="card-body">
+            <h3 class="card-title">POTUS</h3>
+            <p class="card-text">
+              Comúnmente conocido como potus, pothos o potos es una especie de
+              la familia Araceae nativa del sudeste asiático y Nueva Guinea.
+              En ocasiones es confundida con philodendron en las floristerías.
+            </p>
+            <h2 class="precio">$ 1.000</h2>
+            <button type="button" class="btn btn-dark">
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="img/sansevieria.jpg" class="card-img-top grid_sansevieria img-fluid img-responsive" alt="..." />
+          <div class="card-body">
+            <h3 class="card-title">SANSEVIERIA</h3>
+            <p class="card-text">
+              Ahora se la ha incluido en el género Dracaena debido a los
+              estudios moleculares de su filogenia​​​. Tradicionalmente este
+              género ha sido incluido dentro de una definición amplia de la
+              familia Liliaceae.
+            </p>
+            <h2 class="precio">$ 1.100</h2>
+            <button type="button" class="btn btn-dark">
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="img/costilladeadan.jpg" class="card-img-top grid_adan img-fluid img-responsive" alt="..." />
+          <div class="card-body">
+            <h3 class="card-title">COSTILLA DE ADÁN</h3>
+            <p class="card-text">
+              Monstera deliciosa, llamada comúnmente cerimán o costilla de
+              Adán, es una especie de planta trepadora, endémica de selvas
+              tropicales, que se distribuye desde el centro y sur de México
+              hasta el norte de Argentina. <br> <br>
+            </p>
+            <h2 class="precio">$ 2.500</h2>
+            <button type="button" class="btn btn-dark">
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="img/ficuselastica.jpg" class="card-img-top grid_ficus img-fluid img-responsive" alt="..." />
+          <div class="card-body">
+            <h3 class="card-title">FICUS ELÁSTICA</h3>
+            <p class="card-text">
+              Llamado comúnmente árbol del caucho, ​ o gomero, es una especie
+              perennifolia del género Ficus, nativa del nordeste de India,
+              oeste de Indonesia. Fue introducida en Europa en 1815 como
+              planta de interior. <br> <br>
+            </p>
+            <h2 class="precio">$ 1.500</h2>
+            <button type="button" class="btn btn-dark">
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="img/lazodeamor.jpg" class="card-img-top grid_lazo img-fluid img-responsive" alt="..." />
+          <div class="card-body">
+            <h3 class="card-title">LAZO DE AMOR</h3>
+            <p class="card-text">
+              Es una especie fanerógama del género Chlorophytum, nativa de
+              Sudáfrica. Especie acaule de gruesas raíces tuberosas, forma una
+              roseta central de hojas angostas y largas de entre 20–40 cm de
+              longitud y 5–20 mm de ancho.
+            </p>
+            <h2 class="precio">$ 700</h2>
+            <button type="button" class="btn btn-dark">
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="img/dracena.jpg" class="card-img-top grid_dracena img-fluid img-responsive" alt="..." />
+          <div class="card-body">
+            <h3 class="card-title">DRACENA</h3>
+            <p class="card-text">
+              Es una planta originaria de África tropical y Asia, no soporta el sol directo, aunque necesita de mucha
+              luminosidad, se debe evitar los cambios bruscos de temperatura, y se debe rociar el follaje con agua de
+              vez en cuando. Se distingue por tener en sus hojas, rayas blancas cercas de los bordes.
+            </p>
+            <h2 class="precio">$ 1.400</h2>
+            <button type="button" class="btn btn-dark">
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="img/cordatum.jpg" class="card-img-top grid_cordatum img-fluid img-responsive" alt="..." />
+          <div class="card-body">
+            <h3 class="card-title">CORDATUM</h3>
+            <p class="card-text">
+              Es originaria de las selvas tropicales de américa del sur, donde crece anclada a los árboles.
+              Existen cerca de 300 especies, todas se caracterizan por tener hojas grandes y brillantes, y sus raíces
+              crecen como nudos. <br> <br>
+            </p>
+            <h2 class="precio">$ 900</h2>
+            <button type="button" class="btn btn-dark">
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="img/helecho.jpg" class="card-img-top grid_helecho img-fluid img-responsive" alt="..." />
+          <div class="card-body">
+            <h3 class="card-title">HELECHO</h3>
+            <p class="card-text">
+              El Helecho nido o Nido de ave aguanta bastante bien en habitaciones y rincones en los que llega poca luz.
+              Requiere mucha humedad ambiental. Deberás pulverizar sus hojas a menudo, o poner la maceta sobre un plato
+              con guijarros húmedos.
+            </p>
+            <h2 class="precio">$ 750</h2>
+            <button type="button" class="btn btn-dark">
+              Agregar al carrito
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer page-footer bg-black p-y-0">
       <div class="container">
         <div class="row">
-          <div class="col-md-6 col-sm-6 col-xs">
-            <h1 class="titulo animate__animated animate__bounceInLeft">
-              REGALÁ VERDE
-            </h1>
+          <div class="col-md-12 col-sm-12 text-center">
+            <ul>
+              <li>
+                <a href="index.html"><img src="img/instagramblanco.png" alt="Instagram" /></a>
+              </li>
+              <li>
+                <a href="index.html"><img src="img/facebookblanco.png" alt="Facebook" /></a>
+              </li>
+              <li>
+                <a href="index.html"><img src="img/whatsappblanco.png" alt="Whatsapp" /></a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-12 text-center copy">
+            <p class="copy">&copy; 2021 Planta mía.</p>
           </div>
         </div>
       </div>
-    </header>
+    </div>
+  </footer>
 
-    <section>
-      <div class="container box_subtitulo">
-        <div class="row">
-          <div class="col-md-12 col-sm-12 col-xs">
-            <h2 class="subtitulo">Elegí la planta que más te guste</h2>
-          </div>
-        </div>
-      </div>
-      <div class="row row-cols-1 row-cols-md-3 g-4 grid">
-        <div class="col">
-          <div class="card h-100">
-            <img src="img/suculenta2.jpg" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h3 class="card-title">SUCULENTA</h3>
-              <p class="card-text">
-                son aquellas en las que algún órgano está especializado en el
-                almacenamiento de agua en cantidades mayores que las plantas sin
-                esta adaptación. Estos órganos de reserva tienen una alta
-                proporción de tejido parenquimático.
-              </p>
-              <h2 class="precio">$ 800</h2>
-              <button type="button" class="btn btn-dark">
-                Agregar al carrito
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img
-              src="img/potus2.jpg"
-              class="card-img-top grid_potus"
-              alt="..."
-            />
-            <div class="card-body">
-              <h3 class="card-title">POTUS</h3>
-              <p class="card-text">
-                comúnmente conocido como potus, pothos o potos es una especie de
-                la familia Araceae nativa del sudeste asiático y Nueva Guinea.
-                En ocasiones es confundida con philodendron en las floristerías.
-              </p>
-              <h2 class="precio">$ 1.000</h2>
-              <button type="button" class="btn btn-dark">
-                Agregar al carrito
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img
-              src="img/sansevieria.jpg"
-              class="card-img-top grid_sansevieria"
-              alt="..."
-            />
-            <div class="card-body">
-              <h3 class="card-title">SANSEVIERIA</h3>
-              <p class="card-text">
-                Ahora se la ha incluido en el género Dracaena debido a los
-                estudios moleculares de su filogenia​​​. Tradicionalmente este
-                género ha sido incluido dentro de una definición amplia de la
-                familia Liliaceae.
-              </p>
-              <h2 class="precio">$ 1.100</h2>
-              <button type="button" class="btn btn-dark">
-                Agregar al carrito
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img src="img/costilladeadan.jpg" class="card-img-top grid_adan" alt="..." />
-            <div class="card-body">
-              <h3 class="card-title">COSTILLA DE ADÁN</h3>
-              <p class="card-text">
-                Monstera deliciosa, llamada comúnmente cerimán o costilla de
-                Adán, es una especie de planta trepadora, endémica de selvas
-                tropicales, que se distribuye desde el centro y sur de México
-                hasta el norte de Argentina. <br> <br>
-              </p>
-              <h2 class="precio">$ 2.500</h2>
-              <button type="button" class="btn btn-dark">
-                Agregar al carrito
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img
-              src="img/ficuselastica.jpg"
-              class="card-img-top grid_ficus"
-              alt="..."
-            />
-            <div class="card-body">
-              <h3 class="card-title">FICUS ELÁSTICA</h3>
-              <p class="card-text">
-                llamado comúnmente árbol del caucho, ​ o gomero, es una especie
-                perennifolia del género Ficus, nativa del nordeste de India,
-                oeste de Indonesia. Fue introducida en Europa en 1815 como
-                planta de interior. <br> <br>
-              </p>
-              <h2 class="precio">$ 1.500</h2>
-              <button type="button" class="btn btn-dark">
-                Agregar al carrito
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img
-              src="img/lazodeamor.jpg"
-              class="card-img-top grid_lazo"
-              alt="..."
-            />
-            <div class="card-body">
-              <h3 class="card-title">LAZO DE AMOR</h3>
-              <p class="card-text">
-                Es una especie fanerógama del género Chlorophytum, nativa de
-                Sudáfrica. Especie acaule de gruesas raíces tuberosas, forma una
-                roseta central de hojas angostas y largas de entre 20–40 cm de
-                longitud y 5–20 mm de ancho.
-              </p>
-              <h2 class="precio">$ 700</h2>
-              <button type="button" class="btn btn-dark">
-                Agregar al carrito
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img
-              src="img/dracena.jpg"
-              class="card-img-top grid_dracena"
-              alt="..."
-            />
-            <div class="card-body">
-              <h3 class="card-title">DRACENA</h3>
-              <p class="card-text">
-                Es una planta originaria de África tropical y Asia, no soporta el sol directo, aunque necesita de mucha luminosidad, se debe evitar los cambios bruscos de temperatura, y se debe rociar el follaje con agua de vez en cuando. Se distingue por tener en sus hojas, rayas blancas cercas de los bordes.
-              </p>
-              <h2 class="precio">$ 1.400</h2>
-              <button type="button" class="btn btn-dark">
-                Agregar al carrito
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img
-              src="img/cordatum.jpg"
-              class="card-img-top grid_cordatum"
-              alt="..."
-            />
-            <div class="card-body">
-              <h3 class="card-title">CORDATUM</h3>
-              <p class="card-text">
-                Es originaria de las selvas tropicales de américa del sur, donde crece anclada a los árboles.
-                Existen cerca de 300 especies, todas se caracterizan por tener hojas grandes y brillantes, y sus raíces crecen como nudos. <br> <br>  
-              </p>
-              <h2 class="precio">$ 900</h2>
-              <button type="button" class="btn btn-dark">
-                Agregar al carrito
-              </button>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100">
-            <img
-              src="img/helecho.jpg"
-              class="card-img-top grid_helecho"
-              alt="..."
-            />
-            <div class="card-body">
-              <h3 class="card-title">HELECHO</h3>
-              <p class="card-text">
-                El Helecho nido o Nido de ave aguanta bastante bien en habitaciones y rincones en los que llega poca luz. 
-                Requiere mucha humedad ambiental. Deberás pulverizar sus hojas a menudo, o poner la maceta sobre un plato con guijarros húmedos.
-              </p>
-              <h2 class="precio">$ 750</h2>
-              <button type="button" class="btn btn-dark">
-                Agregar al carrito
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+    </script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+    integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous">
+    </script>
+</body>
 
-    <footer>
-      <div class="footer page-footer bg-black p-y-0">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12 col-sm-12 text-center">
-              <ul>
-                <li>
-                  <a href="index.html"
-                    ><img src="img/instagramblanco.png" alt="Instagram"
-                  /></a>
-                </li>
-                <li>
-                  <a href="index.html"
-                    ><img src="img/facebookblanco.png" alt="Facebook"
-                  /></a>
-                </li>
-                <li>
-                  <a href="index.html"
-                    ><img src="img/whatsappblanco.png" alt="Whatsapp"
-                  /></a>
-                </li>
-              </ul>
-            </div>
-            <div class="col-md-12 text-center copy">
-              <p class="copy">&copy; 2021 Planta mía.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-      crossorigin="anonymous">
-    </script>
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous">
-    </script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-      crossorigin="anonymous">
-    </script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
-      integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
-      crossorigin="anonymous">
-    </script>
-  </body>
 </html>
