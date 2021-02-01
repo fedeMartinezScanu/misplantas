@@ -40,21 +40,20 @@ function onSelectClick(event){
     sessionStorage.setItem('clickSaved', comprar);
 }
 
-window.addEventListener('load', function(){
+    $(window).load(function () {
+        const productContainer = $('#productsContainer');
 
-    const productContainer = document.getElementById('productsContainer');
-
-    products.forEach(function(product){
-        const card = productCards(product);
-        productContainer.appendChild(card);
+        products.forEach(function(product){
+            const card = productCards(product);
+            productContainer.appendChild(card);
     });
 
 
     // DOM
 
-    const btnProduct = document.querySelectorAll('.btnProduct');
+    const btnProduct = $('.btnProduct');
     btnProduct.forEach(function(btnProduct){
-        btnProduct.addEventListener('click', onSelectClick);
+        $(btnProduct).click(onSelectClick);
     })
 
 })
