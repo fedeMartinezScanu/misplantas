@@ -24,9 +24,10 @@ class DOMBuilder {
         return p;
     }
 
-    h2(price){
+    h2(price, className){
         const h2 = document.createElement('h2');
         h2.textContent =  price;
+        h2.classList.add(className);
         return h2;
     }
 
