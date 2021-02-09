@@ -1,6 +1,6 @@
 function productCards(product) {
   const div = document.createElement("div");
-  div.classList.add("colCard");
+  div.classList.add("colCard"); 
   
 
   const image = domBuilder.img(product.img, "img-card");
@@ -21,6 +21,7 @@ function productCards(product) {
 
   return div;
 }
+  
 
 let comprar = localStorage.getItem("clickSaved");
 
@@ -37,7 +38,30 @@ function onSelectClick(event) {
 
 }
 
+// Tabla de carrito
+
+function onSelectClick() {
+  let html = '';
+  products.forEach(function (product) {
+      html += `
+      <td class="sub-items">
+      <a href=" "><img src="${product.img}" alt=""></a>
+      <div class="items">
+      <h4>${product.name}</h4>
+      <p>Qty: 1</p>
+      </div>
+      <div class="items2">
+       <h4>$${product.price}</h4>
+       <div class="trash" onclick="removeFromCart('${product.id}')"><i class="fas fa-trash"></i></div>
+      </div>
+      </td>
+     `
+  })
+  return html;
+}
+
 const domBuilder = new DOMBuilder();
+
 
 
 window.addEventListener('load', function() {
@@ -46,31 +70,11 @@ window.addEventListener('load', function() {
   products.forEach(function (product) {
     if (product.available) {
       const card = productCards(product);
-      productContainer.append(card);
+      productContainer.appendChild(card);
     }
     
   });
 
-
-  function onSelectClick() {
-    let html = '';
-    products.forEach(function (item) {
-        html += `
-        <td class="sub-items">
-        <a href=" "><img src="${item.img}" alt=""></a>
-        <div class="items">
-        <h4>${item.name}</h4>
-        <p>Qty: 1</p>
-        </div>
-        <div class="items2">
-         <h4>$${item.price}</h4>
-         <div class="trash" onclick="removeFromCart('${item.id}')"><i class="fas fa-trash"></i></div>
-        </div>
-        </td>
-       `
-    })
-    return html;
-}
 
   // DOM
 
