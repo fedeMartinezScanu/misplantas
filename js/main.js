@@ -1,3 +1,6 @@
+const tabla = document.getElementById('tablaCarrito');
+let contenidoJSON = [];
+
 function productCards(product) {
   const div = document.createElement("div");
   div.classList.add("colCard"); 
@@ -40,9 +43,10 @@ function onSelectClick(event) {
 
 // Tabla de carrito
 
-function onSelectClick() {
+function tablaProductos() {
+  let arrayCart = [];
   let html = '';
-  products.forEach(function (product) {
+  arrayCart.forEach(function (product) {
       html += `
       <td class="sub-items">
       <a href=" "><img src="${product.img}" alt=""></a>
@@ -57,24 +61,40 @@ function onSelectClick() {
       </td>
      `
   })
+  tablaCarrito.innerHTML = arrayCart;
   return html;
+  
 }
 
 const domBuilder = new DOMBuilder();
 
 
-
 window.addEventListener('load', function() {
+  
   const productContainer = document.getElementById('productsContainer');
 
-  products.forEach(function (product) {
-    if (product.available) {
-      const card = productCards(product);
-      productContainer.appendChild(card);
-    }
+  // products.forEach(function (product) {
+  //   if (product.available) {
+  //     const card = productCards(product);
+  //     productContainer.appendChild(card);
+  //   }
     
+  // });
+  
+  $.ajax({
+    url: "/plantamia/js/data.json",
+    dataType: "json",
+    success: function (data){
+      contenidoJSON = data;
+      localStorage.contenidoJSON = JSON.stringify(contenidoJSON)
+      $.each(contenidoJSON,function(product){
+        if (product.available) {
+          const card = productCards(product);
+          productContainer.appendChild(card);
+        }
+      })
+    }
   });
-
 
   // DOM
 

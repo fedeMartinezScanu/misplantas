@@ -5,28 +5,17 @@ const email = $('#email');
 const domicilio = $('#domicilio');
 const pais = $('#pais');
 const cp = $('#cp');
-const cardName = $('#cardName');
-const cardNumber = $('#cardNumber');
-const cvv = $('#cvv');
 
 
 const getFormData = () => {
 
     const $terms = $('input[name=terms]');
-    if(!$terms.is(':checked')){
-        return 'Lo lamento, no aceptaste los terminos y condiciones';
-    }
-
+    if($terms.is(':checked')){
     const $firstName = $('input[name=firstname]');
     const $lastName = $('input[name=lastname]');
     const $address = $('input[name=address]');
     const $city = $('input[name=city]');
     const $postal = $('input[name=postal]');
-    const $cardName = $('input[name=cardName]');
-    const $cardNumber = $('input[name=cardNumber]');
-    const $cardDate = $('input[name=cardDate]');
-    const $cardCvv = $('input[name=cardCvv]');
-
 
     const formData = {
         $firstName : $firstName,
@@ -34,16 +23,30 @@ const getFormData = () => {
         $address : $address,
         $city : $city,
         $postal : $postal,
-        $cardName : $cardName,
-        $cardNumber : $cardNumber,
-        $cardDate : $cardDate,
-        $cardCvv : $cardCvv,
         $terms : $terms
     }
 
     return formData;
-    
+} else {
+    return alert ('Lo lamento, no aceptaste los terminos y condiciones');
 }
+}
+
+let datos = localStorage.getItem("inputSaved");
+
+function onBlur(){
+    let datos = "Completado";
+
+    localStorage.setItem("inputSaved", datos);
+}
+
+function onClick(){
+
+    // if(nombre != " " && apellido != " " && email != " " && domicilio != " " && pais != " " && cp != " " ){
+    // return alert('Muchas gracias, tu compra ha sido realizada! Pronto te estará llegando.');
+    // }
+}
+
 
         $('document').ready(() => {
             const $boton = $('#btn-form');

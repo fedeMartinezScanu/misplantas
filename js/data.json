@@ -1,4 +1,4 @@
-const products = [{
+[{
     "id" : "A000",
     "name" : "SUCULENTA",
     "description" : "Son aquellas en las que algún órgano está especializado en el almacenamiento de agua en cantidades mayores que las plantas sin esta adaptación. Estos órganos de reserva tienen una alta proporción de tejido parenquimático.",
@@ -61,4 +61,4 @@ const products = [{
     "price" : 750,
     "available" : true,
     "img" : "img/helecho.jpg"
-}];
+}]

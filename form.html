@@ -14,10 +14,9 @@
     integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
  
-    <script src="js/domBuilder.js"></script>
-    <script src="js/data.js"></script>
-    <script src="js/form.js"></script>
-    <script src="js/main.js"></script>
+    <script defer src="js/domBuilder.js"></script>
+    <script defer src="js/form.js"></script>
+    <script defer src="js/main.js"></script>
     <script defer src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 </head>
 
@@ -50,33 +49,33 @@
             <label for="first_name">DATOS PERSONALES</label>
           </div>
           <div class="input-field col s6">
-            <input id="last_name" type="text" class="validate" id="apellido" name="lastName">
+            <input id="last_name" type="text" class="validate" id="apellido" name="lastName" onblur="onBlur()">
             <label for="last_name">Apellido/s</label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <input id="email" type="email" class="validate" id="email">
+            <input id="email" type="email" class="validate" id="email" onblur="onBlur()">
             <label for="email">Email</label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <input id="adress" type="email" class="validate" id="domicilio" name="address">
+            <input id="adress" type="text" class="validate" id="domicilio" name="address" onblur="onBlur()">
             <label for="adress">Domicilio</label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s6">
-            <input placeholder="País" id="first_name" type="text" class="validate" id="pais" name="city">
+            <input placeholder="País" id="first_name" type="text" class="validate" id="pais" name="city" onblur="onBlur()">  
             <label for="country">País</label>
           </div>
           <div class="input-field col s6">
-            <input id="cp" type="text" class="validate" id="cp" name="postal">
+            <input id="cp" type="text" class="validate" id="cp" name="postal" onblur="onBlur()">
             <label for="cp">CP</label>
           </div>
         </div>
-        <div class="input-field col s6">
+        <!-- <div class="input-field col s6">
           <input placeholder="Nombre" id="card_name" type="text" class="validate" id="cardName" name="cardName">
           <label for="card_name">DATOS DE TARJETA</label>
         </div>
@@ -101,7 +100,7 @@
         <div class="input-field col s6">
           <input id="cvv" type="text" class="validate" id="cvv" name="cardCvv">
           <label for="cvv">CVV</label>
-        </div>
+        </div> -->
         <div class="col s10">
         <p>
           <label>
@@ -112,7 +111,7 @@
       </div>
         
         <div class="col s10">
-        <a class="waves-effect waves-light btn-large btn-form" >Comprar</a>
+        <a class="waves-effect waves-light btn-large" id="btn-form" onclick="onClick(event)">Comprar</a>
       </div>
         
       </form>
