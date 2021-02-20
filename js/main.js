@@ -82,7 +82,7 @@ window.addEventListener('load', function() {
   // });
   
   $.ajax({
-    url: "/plantamia/js/data.json",
+    url: "js/data.json",
     dataType: "json",
     success: function (data){
       contenidoJSON = data;
