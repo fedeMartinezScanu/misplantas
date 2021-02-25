@@ -38,18 +38,4 @@ class DOMBuilder {
         button.setAttribute('data-id', id);
         return button;
     }
-
-    h3b(title2, className){
-        const h3b = document.createElement('h3');
-        h3b.textContent =  title2;
-        h3b.classList.add(className);
-        return h3b;
-    }
-
-    h2b(price2, className){
-        const h2b = document.createElement('h2');
-        h2b.textContent =  price2;
-        h2b.classList.add(className);
-        return h2b;
-    }
 }

@@ -82,19 +82,16 @@ window.addEventListener('load', function() {
   // });
   
   $.ajax({
-    url: "js/data.json",
-    dataType: "json",
-    success: function (data){
-      contenidoJSON = data;
-      localStorage.contenidoJSON = JSON.stringify(contenidoJSON)
-      $.each(contenidoJSON,function(product){
-        if (product.available) {
-          const card = productCards(product);
-          productContainer.appendChild(card);
-        }
-      })
-    }
-  });
+    method: "GET",
+    url: "data.json"
+  }).done((data) => {
+    contenidoJSON = data;
+    localStorage.contenidoJSON = JSON.stringify(contenidoJSON)
+    contenidoJSON.forEach(product => {
+      let card = productCards(product);
+      productContainer.appendChild(card);
+    })
+  })
 
   // DOM
 

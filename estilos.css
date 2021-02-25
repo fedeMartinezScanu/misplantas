@@ -33,6 +33,20 @@ ul li {
   color: black;
 }
 
+@media (max-width: 450px){
+  .carro{
+    margin-left: 80vw;
+    margin-top: -35%;
+  }
+}
+
+@media (max-width: 1024px){
+  .carro{
+    height: 60px;
+    width: 60px;
+  }
+}
+
 .carro:hover{
   color: #388e3c;
 }
@@ -40,6 +54,12 @@ ul li {
 .portada {
   margin-top: -10%;
   height: 950px !important;
+}
+
+@media (max-width: 450px){
+  .portada{
+    height: 450px !important;
+  }
 }
 
 .titulo {
@@ -51,12 +71,32 @@ ul li {
   letter-spacing: 4px;
 }
 
+@media (max-width: 450px){
+  .titulo{
+    font-size: 3rem;
+    top: -300px
+  }
+}
+
+@media (max-width: 1024px){
+  .titulo{
+    font-size: 5rem;
+    top: -450px
+  }
+}
+
 .subtitulo {
   color: #388e3c;
   font-size: 3rem;
   text-align: center;
   font-weight: bold;
   margin-bottom: 3%;
+}
+
+@media (max-width: 450px){
+  .subtitulo{
+    font-size: 2rem;
+  }
 }
 
 .box_subtitulo {
@@ -66,7 +106,21 @@ ul li {
 
 .img-card{
   height: 42vh;
-  width: 28vw;
+  width: 25vw;
+}
+
+@media (max-width: 450px){
+  .img-card{
+    width: 70vw;
+    height: 30vh;
+  }
+}
+
+@media (max-width: 1024px){
+  .img-card{
+    width: 40vw;
+    height: 30vh;
+  }
 }
 
 .titleCard{
@@ -104,10 +158,30 @@ footer ul li {
   margin: 8px;
 }
 
+@media (max-width: 380px){
+  .titulo{
+    font-size: 3rem;
+    top: -500px
+  }
+}
+
 .parrafos{
   width: 26vw;
   font-weight: bold;
   text-align: center;
+}
+
+@media (max-width: 450px){
+  .parrafos{
+    width: 70vw;
+  }
+}
+
+@media (max-width: 1024px){
+  .parrafos{
+    width: 40vw;
+    font-size: 1.5rem;
+  }
 }
 
 .btnProduct{
@@ -116,7 +190,15 @@ footer ul li {
   font-weight: bold;
   border: none;
   background-color: #00c853;
-  align-items: center;
+  margin-bottom: -1%;
+}
+
+@media (max-width: 1024px){
+  .btnProduct{
+    height: 7%;
+    width: 25%;
+    font-size: 1.5rem;
+  }
 }
 
 
@@ -183,7 +265,7 @@ label {
   background-color: #00e676 !important;
   color: black !important;
   font-weight: bold !important;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .termLabel{
