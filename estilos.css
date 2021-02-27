@@ -6,8 +6,8 @@
 }
 
 .logo {
-  height: 90px;
-  width: 90px;
+  height: 80px;
+  width: 80px;
 }
 
 .navbar{
@@ -27,9 +27,9 @@ ul li {
 .carro {
   position: relative;
   margin-left: 90vw;
-  margin-top: -9%;
-  height: 40px;
-  width: 40px;
+  margin-top: -11%;
+  height: 35px;
+  width: 35px;
   color: black;
 }
 
@@ -42,8 +42,8 @@ ul li {
 
 @media (max-width: 1024px){
   .carro{
-    height: 60px;
-    width: 60px;
+    height: 40px;
+    width: 40px;
   }
 }
 
@@ -119,7 +119,7 @@ ul li {
 @media (max-width: 1024px){
   .img-card{
     width: 40vw;
-    height: 30vh;
+    height: 35vh;
   }
 }
 
@@ -180,7 +180,7 @@ footer ul li {
 @media (max-width: 1024px){
   .parrafos{
     width: 40vw;
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 }
 
@@ -195,7 +195,7 @@ footer ul li {
 
 @media (max-width: 1024px){
   .btnProduct{
-    height: 7%;
+    height: 9%;
     width: 25%;
     font-size: 1.5rem;
   }

@@ -83,15 +83,17 @@ window.addEventListener('load', function() {
   
   $.ajax({
     method: "GET",
-    url: "data.json"
-  }).done((data) => {
+    url: "js/data.json",
+    dataType: "json",
+    success: function (data) {
     contenidoJSON = data;
     localStorage.contenidoJSON = JSON.stringify(contenidoJSON)
     contenidoJSON.forEach(product => {
       let card = productCards(product);
       productContainer.appendChild(card);
     })
-  })
+  }
+});
 
   // DOM
 
